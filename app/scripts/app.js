@@ -2,32 +2,33 @@
 
 /**
  * @ngdoc overview
- * @name mobilAppApp
+ * @name mobilApp
  * @description
- * # mobilAppApp
+ * # mobilApp
  *
  * Main module of the application.
  */
 angular
-  .module('mobilAppApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+	.module( 'mobilApp', [
+		'ngAnimate',
+		'ngCookies',
+		'ngResource',
+		'ngRoute',
+		'ngSanitize',
+		'ngTouch',
+		'edmundsLibrary'
+	] )
+	.config( function ($routeProvider) {
+		$routeProvider
+			.when( '/', {
+				templateUrl: 'views/main.html',
+				controller : 'MainCtrl'
+			} )
+			.when( '/about', {
+				templateUrl: 'views/about.html',
+				controller : 'AboutCtrl'
+			} )
+			.otherwise( {
+				redirectTo: '/'
+			} );
+	} );
