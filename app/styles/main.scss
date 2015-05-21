@@ -1,5 +1,8 @@
 // bower:scss
+@import "bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "neat/app/assets/stylesheets/_neat.scss";
 // endbower
+@import "base/base.scss";
 
 .browsehappy {
   margin: 0.2em 0;
