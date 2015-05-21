@@ -9,7 +9,6 @@
  */
 app.controller( 'MainCtrl', function ($scope, edmDataAll, edmModelByMakes, edmYearByMakesModel) {
 
-
 	edmDataAll()
 		.then( function (result) {
 			$scope.carMakes = result.makes;
@@ -28,6 +27,6 @@ app.controller( 'MainCtrl', function ($scope, edmDataAll, edmModelByMakes, edmYe
 			.then( function (result) {
 				$scope.carByMakeModels = result.years;
 			} );
-	}
+	};
 
 } );
