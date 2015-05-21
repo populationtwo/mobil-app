@@ -7,21 +7,27 @@
  * # MainCtrl
  * Controller of the mobilApp
  */
-angular.module( 'mobilApp' )
-	.controller( 'MainCtrl', function ($scope, edmMakesFactory) {
-		$scope.awesomeThings = [
-			'HTML5 Boilerplate',
-			'AngularJS',
-			'Karma'
-		];
+app.controller( 'MainCtrl', function ($scope, edmDataAll, edmModelByMakes, edmYearByMakesModel) {
 
-		//edmMakesFactory()
-		//	.then( function (carMakesXhr) {
-		//		$scope.carMakes = carMakesXhr.data;
-		//	} );
-		edmMakesFactory()
+
+	edmDataAll()
+		.then( function (result) {
+			$scope.carMakes = result.makes;
+		} );
+
+	$scope.findModel = function (make) {
+		edmModelByMakes( make )
 			.then( function (result) {
-				$scope.carMakes = result.makes;
+				$scope.carByModels = result.models;
 			} );
+	};
 
-	} );
+	$scope.findYears = function (make, model) {
+
+		edmYearByMakesModel( make, model )
+			.then( function (result) {
+				$scope.carByMakeModels = result.years;
+			} );
+	}
+
+} );
