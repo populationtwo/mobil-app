@@ -1,3 +1,5 @@
+/* global app:true */
+/* exported app */
 'use strict';
 
 /**
@@ -8,7 +10,7 @@
  *
  * Main module of the application.
  */
-angular
+var app = angular
 	.module( 'mobilApp', [
 		'ngAnimate',
 		'ngCookies',
