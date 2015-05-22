@@ -30,6 +30,9 @@ var app= angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+		.when('/compare', {
+			templateUrl: 'views/compare.html'
+		})
       .otherwise({
         redirectTo: '/'
       });
