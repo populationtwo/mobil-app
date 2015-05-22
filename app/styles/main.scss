@@ -2,6 +2,32 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+
+/* Tools */
+@import "tools/functions";
+@import "tools/site-settings";
+@import "tools/mixins";
+@import "tools/helpers";
+
+/* Base */
+@import "base/base";
+@import "base/form";
+
+/* Fonts */
+//@import "fonts/...";
+
+/* Layout */
+@import "layout/header";
+@import "layout/nav";
+@import "layout/footer";
+@import "layout/compare";
+
+/* Modules */
+@import "modules/btn";
+@import "modules/icons";
+
+
+
 $malibu: #55C5FF;
 $concrete : #F3F3F3;
 $gray-darker:  #222;
