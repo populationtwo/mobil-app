@@ -1,113 +1,348 @@
 <div class="container">
-	<div class="row">
-		<div class="col-md-12">
-			<h1>Compare</h1>
+<div class="row">
+	<div class="col-md-12">
+		<h1>Compare</h1>
+		<a href="" class="btn btn-default">Start a New Compare</a>
+		<a href="" class="btn btn-default">Save Comparison</a>
+	</div>
+</div>
+<div class="row">
 
-			<p>See how cars are similar and how they're different. Choose up to four and start comparing.</p>
-			<a href="" class="btn btn-default">Start a New Compare</a>
+		<form class="">
+			<div class="col-md-2">
+				Add more cars
+			</div>
+			<div class="col-md-2">
+
+			<div class="form-group">
+				<label>Make</label>
+				<select class="form-control">
+					<option value="">1</option>
+					<option value="">2</option>
+					<option value="">3</option>
+					<option value="">4</option>
+				</select>
+			</div>
+			</div>
+			<div class="col-md-2">
+
+			<div class="form-group">
+				<label>Model</label>
+				<select class="form-control">
+					<option value="">1</option>
+					<option value="">2</option>
+					<option value="">3</option>
+					<option value="">4</option>
+				</select>
+			</div>
+			</div>
+
+			<div class="col-md-2">
+
+				<div class="form-group">
+				<label>Year</label>
+				<select class="form-control">
+					<option value="">1</option>
+					<option value="">2</option>
+					<option value="">3</option>
+					<option value="">4</option>
+				</select>
+			</div>
+			</div>
+
+			<div class="col-md-2">
+
+				<div class="form-group">
+					<label>Style</label>
+					<select class="form-control">
+						<option value="">1</option>
+						<option value="">2</option>
+						<option value="">3</option>
+						<option value="">4</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-2">
+<button>Add</button>
+			</div>
+
+		</form>
+
+
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				<thead>
+				<tr>
+					<th></th>
+					<th>2015 Acura ILX</th>
+					<th>Car 2</th>
+					<th>Car 3</th>
+					<th>Car 4</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th></th>
+					<td>
+						<figure>
+							<img src="http://placehold.it/180x100" alt="" />
+						</figure>
+					</td>
+					<td>
+						<figure>
+							<img src="http://placehold.it/180x100" alt="" />
+						</figure>
+					</td>
+					<td>
+						<figure>
+							<img src="http://placehold.it/180x100" alt="" />
+						</figure>
+					</td>
+					<td>
+						<figure>
+							<img src="http://placehold.it/180x100" alt="" />
+						</figure>
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<a href="" class="btn btn-default btn-sm">Remove</a></td>
+					<td><a href="" class="btn btn-default btn-sm">Remove</a></td>
+					<td><a href="" class="btn btn-default btn-sm">Remove</a></td>
+					<td><a href="" class="btn btn-default btn-sm">Remove</a></td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<a href="" class="btn btn-default btn-sm">Research This Vehicle</a></td>
+					<td><a href="" class="btn btn-default btn-sm">Research This Vehicle</a></td>
+					<td><a href="" class="btn btn-default btn-sm">Research This Vehicle</a></td>
+					<td><a href="" class="btn btn-default btn-sm">Research This Vehicle</a></td>
+				</tr>
+
+				</tbody>
+			</table>
 		</div>
 	</div>
-	<div class="row">
+</div>
+<div class="row">
+<div class="col-md-12">
+<div ng-controller="AccordionCtrl">
+<accordion close-others="oneAtATime">
+<accordion-group heading="Summary" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+	<div class="table-responsive">
+		<table class="table table-bordered">
 
-		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" data-toggle="collapse">
-			<div class="panel panel-default">
-				<div class="panel-heading" role="tab" id="headingOne">
-					<h4 class="panel-title">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-							Collapsible Group Item #1
-						</a>
-					</h4>
-				</div>
-				<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-					<div class="panel-body">
-						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					</div>
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading" role="tab" id="headingTwo">
-					<h4 class="panel-title">
-						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-							Collapsible Group Item #2
-						</a>
-					</h4>
-				</div>
-				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-					<div class="panel-body">
-						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					</div>
-				</div>
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading" role="tab" id="headingThree">
-					<h4 class="panel-title">
-						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-							Collapsible Group Item #3
-						</a>
-					</h4>
-				</div>
-				<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-					<div class="panel-body">
-						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					</div>
-				</div>
-			</div>
-		</div>
-
+			<tbody>
+			<tr>
+				<th>Invoice Price</th>
+				<td>$25,517 - $27,645</td>
+				<td>$25,517 - $27,645</td>
+				<td>$25,517 - $27,645</td>
+				<td>$25,517 - $27,645</td>
+			</tr>
+			<tr>
+				<th>Available Engines</th>
+				<td>
+					<ul>
+						<li>150-hp 2.0-liter I-4 (premium)</li>
+						<li>201-hp 2.4-liter I-4 (premium)</li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li>150-hp 2.0-liter I-4 (premium)</li>
+						<li>201-hp 2.4-liter I-4 (premium)</li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li>150-hp 2.0-liter I-4 (premium)</li>
+						<li>201-hp 2.4-liter I-4 (premium)</li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li>150-hp 2.0-liter I-4 (premium)</li>
+						<li>201-hp 2.4-liter I-4 (premium)</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<th>Available Transmissions</th>
+				<td>
+					<ul>
+						<li>6-spd man w/OD</li>
+						<li>5-spd automatic w/OD and auto-man</li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li>6-spd man w/OD</li>
+						<li>5-spd automatic w/OD and auto-man</li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li>6-spd man w/OD</li>
+						<li>5-spd automatic w/OD and auto-man</li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li>6-spd man w/OD</li>
+						<li>5-spd automatic w/OD and auto-man</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<th>Fuel Economy City</th>
+				<td>22 - 24 mpg</td>
+				<td>22 - 24 mpg</td>
+				<td>22 - 24 mpg</td>
+				<td>22 - 24 mpg</td>
+			</tr>
+			<tr>
+				<th>Fuel Economy Highway</th>
+				<td>31 - 35 mpg</td>
+				<td>31 - 35 mpg</td>
+				<td>31 - 35 mpg</td>
+				<td>31 - 35 mpg</td>
+			</tr>
+			<tr>
+				<th>Overall Consumer Rating</th>
+				<td>5</td>
+				<td>5</td>
+				<td>5</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>
+					<a href="" class="btn btn-default btn-sm">Research This Vehicle</a></td>
+				<td><a href="" class="btn btn-default btn-sm">Research This Vehicle</a></td>
+				<td><a href="" class="btn btn-default btn-sm">Research This Vehicle</a></td>
+				<td><a href="" class="btn btn-default btn-sm">Research This Vehicle</a></td>
+			</tr>
+			</tbody>
+		</table>
 	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<div class="table-responsive">
+</accordion-group>
+<accordion-group heading="Interior Features">
+	<div class="table-responsive">
+		<table class="table table-bordered">
+			<thead>
 
-				<table class="table table-bordered">
-					<thead>
-					<tr>
-						<th>Invoice Price</th>
-						<th>Available Engines</th>
-						<th>Available Transmissions</th>
-						<th>Fuel Economy City</th>
-						<th>Fuel Economy Highway</th>
-						<th>Overall Consumer Rating</th>
-
-					</tr>
-					</thead>
-					<tbody>
-					<tr>
-						<th scope="row">1</th>
-						<td>Table cell</td>
-						<td>Table cell</td>
-						<td>Table cell</td>
-						<td>Table cell</td>
-
-					</tr>
-					<tr>
-						<th scope="row">2</th>
-						<td>Table cell</td>
-						<td>Table cell</td>
-						<td>Table cell</td>
-						<td>Table cell</td>
-
-					</tr>
-					<tr>
-						<th scope="row">3</th>
-						<td>
-
-
-							<a href="" class="btn btn-default btn-sm">Research This Vehicle</a>
-
-
-						</td>
-
-
-						<td>Table cell</td>
-						<td>Table cell</td>
-						<td>Table cell</td>
-
-					</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
+			</thead>
+			<tbody>
+			<tr>
+				<th>Invoice Price</th>
+				<td>$25,517 - $27,645</td>
+				<td>$25,517 - $27,645</td>
+				<td>$25,517 - $27,645</td>
+				<td>$25,517 - $27,645</td>
+			</tr>
+			<tr>
+				<th>Available Engines</th>
+				<td>
+					<ul>
+						<li>150-hp 2.0-liter I-4 (premium)</li>
+						<li>201-hp 2.4-liter I-4 (premium)</li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li>150-hp 2.0-liter I-4 (premium)</li>
+						<li>201-hp 2.4-liter I-4 (premium)</li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li>150-hp 2.0-liter I-4 (premium)</li>
+						<li>201-hp 2.4-liter I-4 (premium)</li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li>150-hp 2.0-liter I-4 (premium)</li>
+						<li>201-hp 2.4-liter I-4 (premium)</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<th>Available Transmissions</th>
+				<td>
+					<ul>
+						<li>6-spd man w/OD</li>
+						<li>5-spd automatic w/OD and auto-man</li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li>6-spd man w/OD</li>
+						<li>5-spd automatic w/OD and auto-man</li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li>6-spd man w/OD</li>
+						<li>5-spd automatic w/OD and auto-man</li>
+					</ul>
+				</td>
+				<td>
+					<ul>
+						<li>6-spd man w/OD</li>
+						<li>5-spd automatic w/OD and auto-man</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<th>Fuel Economy City</th>
+				<td>22 - 24 mpg</td>
+				<td>22 - 24 mpg</td>
+				<td>22 - 24 mpg</td>
+				<td>22 - 24 mpg</td>
+			</tr>
+			<tr>
+				<th>Fuel Economy Highway</th>
+				<td>31 - 35 mpg</td>
+				<td>31 - 35 mpg</td>
+				<td>31 - 35 mpg</td>
+				<td>31 - 35 mpg</td>
+			</tr>
+			<tr>
+				<th>Overall Consumer Rating</th>
+				<td>5</td>
+				<td>5</td>
+				<td>5</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>
+					<a href="" class="btn btn-default btn-sm">Research This Vehicle</a></td>
+				<td><a href="" class="btn btn-default btn-sm">Research This Vehicle</a></td>
+				<td><a href="" class="btn btn-default btn-sm">Research This Vehicle</a></td>
+				<td><a href="" class="btn btn-default btn-sm">Research This Vehicle</a></td>
+			</tr>
+			</tbody>
+		</table>
 	</div>
+</accordion-group>
+<accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+	{{group.content}}
+</accordion-group>
+
+</accordion>
+</div>
+
+</div>
+
+</div>
+
 
 </div>

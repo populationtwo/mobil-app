@@ -1,0 +1,35 @@
+
+//== Navbar
+//
+//##
+
+// Basics of a navbar
+//$navbar-height:                    50px !default;
+//$navbar-margin-bottom:             $line-height-computed !default;
+$navbar-border-radius:             0;
+//$navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
+//$navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
+//$navbar-collapse-max-height:       340px !default;
+
+$navbar-default-color:             #777 !default;
+$navbar-default-bg: #2a2a2a !default;
+$navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
+
+// Navbar links
+$navbar-default-link-color: #e8e8e8 !default;
+$navbar-default-link-hover-color:          #FFF !default;
+$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-active-color:         #FFF !default;
+$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-disabled-color:       #ccc !default;
+$navbar-default-link-disabled-bg:          transparent !default;
+
+// Navbar brand label
+//$navbar-default-brand-color:               $navbar-default-link-color !default;
+//$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
+//$navbar-default-brand-hover-bg:            transparent !default;
+
+// Navbar toggle
+//$navbar-default-toggle-hover-bg:           #ddd !default;
+//$navbar-default-toggle-icon-bar-bg:        #888 !default;
+//$navbar-default-toggle-border-color:       #ddd !default;
