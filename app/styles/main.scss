@@ -36,6 +36,11 @@ $gray-dark: #333;
 $gray: #444;
 $gray-light: #999;
 $gray-lighter: #eee;
+$yellow: #FFCC2F;
+$link: #008EC4;
+$green: #2BAF2B;
+$brown: #543729;
+$orange: #EF5734;
 
 .browsehappy {
 	margin: 0.2em 0;
@@ -63,7 +68,9 @@ body {
 	margin-bottom: 10px;
 	background: black;
 }
-
+.page-header {
+	background: ;
+}
 /* Custom page footer */
 .page-footer {
 	padding-top: 19px;

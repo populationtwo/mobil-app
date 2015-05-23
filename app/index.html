@@ -38,10 +38,13 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a ng-href="#/compare">Home</a></li>
-					<li><a ng-href="#/compare/model">Compare 2</a></li>
+					<li class="active"><a ui-sref="compare-landing">Home</a></li>
+					<li><a ui-sref="compare">Compare</a></li>
 				</ul>
-
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Login</a></li>
+					<li><a href="#">View Saved</a></li>
+				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
 		</div>
@@ -49,8 +52,8 @@
 	</nav>
 <!--</header>-->
 
-
-<div ng-view=""></div>
+<div ui-view="pageheader" class="page-header"></div>
+<div ui-view="content"></div>
 
 <div class="page-footer">
 	<div class="container">
@@ -84,6 +87,7 @@
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
