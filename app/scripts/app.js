@@ -52,6 +52,13 @@ var app = angular
 			} )
 			.state( 'compare', {
 				url        : '/compare/model',
-				templateUrl: 'views/compare-model.html'
+				views: {
+					'pageheader': {
+						templateUrl: 'views/partials/header.html'
+					},
+					'content': {
+						templateUrl: 'views/compare-model.html'
+					}
+				}
 			} );
 	} );
