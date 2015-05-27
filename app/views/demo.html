@@ -1,0 +1,11 @@
+<div class="jumbotron">
+	<h2>Get a list of all new car makes</h2>
+	<select ng-model="make" ng-options="carMake.name as carMake.name for carMake in carMakes" ng-change="findModel(make)"></select>
+	{{make}}
+	<hr />
+	<h2>Get model</h2>
+	<select ng-model="model" ng-options="carByModel.name as carByModel.name for carByModel in carByModels" ng-change="findYears(make,model)"></select>
+	<hr />
+	<h2>Get years</h2>
+	<select ng-model="year" ng-options="carByMakeModel.year as carByMakeModel.year for carByMakeModel in carByMakeModels"></select>
+</div>

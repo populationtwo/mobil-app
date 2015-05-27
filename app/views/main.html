@@ -1,11 +1,109 @@
-<div class="jumbotron">
-	<h2>Get a list of all new car makes</h2>
-	<select ng-model="make" ng-options="carMake.name as carMake.name for carMake in carMakes" ng-change="findModel(make)"></select>
-	{{make}}
-	<hr />
-	<h2>Get model</h2>
-	<select ng-model="model" ng-options="carByModel.name as carByModel.name for carByModel in carByModels" ng-change="findYears(make,model)"></select>
-	<hr />
-	<h2>Get years</h2>
-	<select ng-model="year" ng-options="carByMakeModel.year as carByMakeModel.year for carByMakeModel in carByMakeModels"></select>
+<div class="page-header">
+
+<div class="container ">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Compare</h1>
+
+      <p>See how cars are similar and how they're different. Choose up to four and start comparing.</p>
+      <a href="" class="btn btn-default">Start a New Compare</a>
+    </div>
+  </div>
+</div>
+</div>
+
+  <div class="container">
+  <div class="row">
+    <div class="compare-basket">
+      <div class="col-md-3"><img src="http://placehold.it/50x50" alt="Product">
+        <button>
+          Remove
+        </button>
+      </div>
+      <div class="col-md-3"><img src="http://placehold.it/50x50" alt="Product">
+        <button>
+          Remove
+        </button>
+      </div>
+      <div class="col-md-3"><img src="http://placehold.it/50x50" alt="Product">
+        <button>
+          Remove
+        </button>
+      </div>
+      <div class="col-md-3">
+        <button>
+          Compare
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="search-panel">
+
+    <form>
+      <div class="form-group">
+        <label for="">Search</label>
+        <input type="email" class="form-control" id="" placeholder="Search">
+      </div>
+
+      <div class="form-group">
+        <label class="checkbox-inline">
+          <input type="checkbox" id="inlineCheckbox1" value="option1"> All
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="inlineCheckbox2" value="option2"> Car
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="inlineCheckbox3" value="option3"> Minivan
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="inlineCheckbox1" value="option1"> Suv
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="inlineCheckbox2" value="option2"> Truck
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="inlineCheckbox3" value="option3"> Van
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="checkbox-inline">
+          <input type="checkbox" id="inlineCheckbox1" value="option1"> New
+        </label>
+        <label class="checkbox-inline">
+          <input type="checkbox" id="inlineCheckbox2" value="option2"> Used
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="">Model</label>
+        <select class="form-control">
+          <option>Honda</option>
+          <option>Toyota</option>
+          <option>Audi</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="compare-block">
+      <div class="card" ng-include="'views/partials/comparison-card.html'"></div>
+      <div class="card" ng-include="'views/partials/comparison-card.html'"></div>
+      <div class="card" ng-include="'views/partials/comparison-card.html'"></div>
+      <div class="card" ng-include="'views/partials/comparison-card.html'"></div>
+      <div class="card" ng-include="'views/partials/comparison-card.html'"></div>
+      <div class="card" ng-include="'views/partials/comparison-card.html'"></div>
+      <div class="card" ng-include="'views/partials/comparison-card.html'"></div>
+      <div class="card" ng-include="'views/partials/comparison-card.html'"></div>
+      <div class="card" ng-include="'views/partials/comparison-card.html'"></div>
+      <div class="card" ng-include="'views/partials/comparison-card.html'"></div>
+      <div class="card" ng-include="'views/partials/comparison-card.html'"></div>
+      <div class="card" ng-include="'views/partials/comparison-card.html'"></div>
+
+    </div>
+  </div>
+
 </div>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js flexbox">
 <head>
 	<meta charset="utf-8">
 	<title></title>
@@ -32,14 +32,13 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">App</a>
+				<a class="navbar-brand" href="#/">App</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a ui-sref="compare-landing">Home</a></li>
-					<li><a ui-sref="compare">Compare</a></li>
+					<li><a ui-sref="compare">Result</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#">Login</a></li>
@@ -51,9 +50,7 @@
 		<!-- /.container-fluid -->
 	</nav>
 <!--</header>-->
-
-<div ui-view="pageheader" class="page-header"></div>
-<div ui-view="content"></div>
+<div ui-view></div>
 
 <div class="page-footer">
 	<div class="container">
