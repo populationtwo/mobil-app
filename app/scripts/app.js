@@ -32,12 +32,13 @@ var app = angular
 
 
       .state( 'home', {
-        url  : '/',
-        templateUrl: '../partials/comparison/main.html'
+        url        : '/',
+        templateUrl: '../partials/comparison/main.html',
+        controller : 'MainCtrl'
 
       } )
       .state( 'compare', {
-        url  : '/compare',
+        url        : '/compare',
         templateUrl: '../partials/result/compare-result.html'
 
 
@@ -47,4 +48,13 @@ var app = angular
         templateUrl: '../partials/about/about.html',
         controller : 'AboutCtrl'
       } );
-  } );
+  } )
+  .factory( 'appData', ['edmundsLibFactory',
+    function (edmundsLibFactory) {
+      var Data = {};
+
+      Data.countries = edmundsLibFactory.getAllCarMakes();
+
+      return Data;
+    }] );
+
