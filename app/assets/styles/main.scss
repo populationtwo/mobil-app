@@ -1,33 +1,33 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 
-@import "tools/bootstrap-variables";
+@import "tools/_bootstrap-variables";
 
 // bower:scss
-@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
 /* Tools */
-@import "tools/functions";
-@import "tools/site-settings";
-@import "tools/mixins";
-@import "tools/helpers";
+@import "tools/_functions";
+@import "tools/_site-settings";
+@import "tools/_mixins";
+@import "tools/_helpers";
 
 /* Base */
-@import "base/base";
-@import "base/form";
+@import "base/_base";
+@import "base/_form";
 
 /* Fonts */
 //@import "fonts/...";
 
 /* Layout */
-@import "layout/header";
-@import "layout/nav";
-@import "layout/footer";
-@import "layout/compare";
+@import "layout/_header";
+@import "layout/_nav";
+@import "layout/_footer";
+@import "layout/_compare";
 
 /* Modules */
-@import "modules/btn";
-@import "modules/icons";
+@import "modules/_btn";
+@import "modules/_icons";
 
 $malibu: #55C5FF;
 $concrete: #F3F3F3;
