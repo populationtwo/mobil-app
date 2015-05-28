@@ -1,3 +1,11 @@
+.compare-basket {
+  margin-bottom: 40px;
+  padding: 20px 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+
 .compare-block {
   margin: 0 auto;
   padding: 4em 1em;
@@ -31,6 +39,16 @@
   -ms-flex-align: start;
   align-items: flex-start;
 }
+
+.search-panel {
+  background: white;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px 30px;
+
+}
+
+
 
 .card {
   position: relative;
@@ -69,7 +87,3 @@
 //}
 
 
-.search-panel {
-  width: 600px;
-  margin: 0 auto;
-}

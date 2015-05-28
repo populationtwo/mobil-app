@@ -1,18 +1,18 @@
 <div class="page-intro">
 
-<div class="container ">
-  <div class="row">
-    <div class="col-md-12">
-      <h1>Compare</h1>
+  <div class="container ">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Compare</h1>
 
-      <p>See how cars are similar and how they're different. Choose up to four and start comparing.</p>
-      <a href="" class="btn btn-default">Start a New Compare</a>
+        <p>See how cars are similar and how they're different. Choose up to four and start comparing.</p>
+        <a href="" class="btn btn-default">Start a New Compare</a>
+      </div>
     </div>
   </div>
 </div>
-</div>
 
-  <div class="container">
+<div class="container">
   <div class="row">
     <div class="compare-basket">
       <div class="col-md-3"><img src="http://placehold.it/50x50" alt="Product">
@@ -31,7 +31,7 @@
         </button>
       </div>
       <div class="col-md-3">
-        <button>
+        <button class="btn btn-default">
           Compare
         </button>
       </div>
@@ -40,51 +40,54 @@
   <div class="row">
     <div class="search-panel">
 
-    <form>
-      <div class="form-group">
-        <label for="">Search</label>
-        <input type="email" class="form-control" id="" placeholder="Search">
-      </div>
+      <form>
+        <div class="form-group">
+          <label for="">Search</label>
+          <input type="email" class="form-control" id="" placeholder="e.g. 2015 Audi A5">
+        </div>
 
-      <div class="form-group">
-        <label class="checkbox-inline">
-          <input type="checkbox" id="inlineCheckbox1" value="option1"> All
-        </label>
-        <label class="checkbox-inline">
-          <input type="checkbox" id="inlineCheckbox2" value="option2"> Car
-        </label>
-        <label class="checkbox-inline">
-          <input type="checkbox" id="inlineCheckbox3" value="option3"> Minivan
-        </label>
-        <label class="checkbox-inline">
-          <input type="checkbox" id="inlineCheckbox1" value="option1"> Suv
-        </label>
-        <label class="checkbox-inline">
-          <input type="checkbox" id="inlineCheckbox2" value="option2"> Truck
-        </label>
-        <label class="checkbox-inline">
-          <input type="checkbox" id="inlineCheckbox3" value="option3"> Van
-        </label>
-      </div>
-      <div class="form-group">
-        <label class="checkbox-inline">
-          <input type="checkbox" id="inlineCheckbox1" value="option1"> New
-        </label>
-        <label class="checkbox-inline">
-          <input type="checkbox" id="inlineCheckbox2" value="option2"> Used
-        </label>
-      </div>
-      <div class="form-group">
-        <label for="">Model</label>
-        <select class="form-control">
-          <option>Honda</option>
-          <option>Toyota</option>
-          <option>Audi</option>
-        </select>
-      </div>
+        <div class="form-group">
+          <label for="">Type:</label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option1"> All
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox2" value="option2"> Car
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox3" value="option3"> Minivan
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option1"> Suv
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox2" value="option2"> Truck
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox3" value="option3"> Van
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="">Condition:</label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option1"> New
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox2" value="option2"> Used
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="">Model:</label>
+          <select class="form-control">
+            <option>&nbsp;</option>
+            <option>Honda</option>
+            <option>Toyota</option>
+            <option>Audi</option>
+          </select>
+        </div>
 
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
 
   </div>
@@ -102,7 +105,6 @@
       <div class="card" ng-include="'views/partials/comparison-card.html'"></div>
       <div class="card" ng-include="'views/partials/comparison-card.html'"></div>
       <div class="card" ng-include="'views/partials/comparison-card.html'"></div>
-
     </div>
   </div>
 
