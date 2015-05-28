@@ -53,7 +53,7 @@ var app = angular
     function (edmundsLibFactory) {
       var Data = {};
 
-      Data.countries = edmundsLibFactory.getAllCarMakes();
+      Data.makes = edmundsLibFactory.getAllCarMakes();
 
       return Data;
     }] );
