@@ -33,18 +33,18 @@ var app = angular
 
       .state( 'home', {
         url  : '/',
-        templateUrl: 'views/main.html'
+        templateUrl: '../partials/comparison/main.html'
 
       } )
       .state( 'compare', {
         url  : '/compare',
-        templateUrl: 'views/compare-result.html'
+        templateUrl: '../partials/result/compare-result.html'
 
 
       } )
       .state( 'about', {
         url        : '/about',
-        templateUrl: 'views/about.html',
+        templateUrl: '../partials/about/about.html',
         controller : 'AboutCtrl'
       } );
   } );
