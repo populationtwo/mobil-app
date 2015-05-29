@@ -35,8 +35,16 @@ app.controller( 'MainCtrl', function ($scope, edmDataAll, edmModelByMakes, edmYe
       appData.makes = result.makes;
     }
     $scope.makes = appData.makes;
+
+
   } );
 
+  $q.when( appData.models ).then( function (result) {
+    if (toString.call( appData.models ) == '[object Object]') {
+      appData.models = result.models;
+    }
+    $scope.models = appData.models;
+  } );
 
 } )
 ;

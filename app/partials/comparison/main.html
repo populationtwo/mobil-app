@@ -92,15 +92,17 @@
 
   </div>
   <div class="row">
+    <span ng-repeat="make in makes">{{make.name}}</span>
     <div class="compare-block">
-      <div class="card" ng-repeat="make in makes">
+      <div class="card" ng-repeat="model in models">
         <div class="card-inner">
           <figure>
             <img src="http://media.ed.edmunds-media.com/nissan/frontier/2014/oem/2014_nissan_frontier_extended-cab-pickup_pro-4x_fq_oem_1_276.jpg" class="img-responsive" alt="">
           </figure>
           <div class="card-info">
             <h3>2015 Nissan Frontier King Cab</h3>
- {{ make.name }}
+ {{ model.name }}
+ {{ model.id }}
             <div class="card-detail">
               <p class="msrp">$17,990</p>
 

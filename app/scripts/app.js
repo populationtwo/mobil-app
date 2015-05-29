@@ -54,6 +54,7 @@ var app = angular
       var Data = {};
 
       Data.makes = edmundsLibFactory.getAllCarMakes();
+      Data.models = edmundsLibFactory.getAllNewCarModels();
 
       return Data;
     }] );

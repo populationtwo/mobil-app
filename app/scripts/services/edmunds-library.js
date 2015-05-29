@@ -48,25 +48,57 @@ angular.module( 'edmundsLibrary', [] )
   .factory( 'edmundsLibFactory', function ($http, $q, APP_API, EDM_API_PREFIX) {
 
     return {
-      getAllCarMakes: function () {
+      getAllCarMakes    : function () {
         var d = $q.defer();
-        var url = EDM_API_PREFIX + '/makes?state=new&view=basic&fmt=json&api_key=' +APP_API;
-
+        var url = EDM_API_PREFIX + '/makes?state=new&view=basic&fmt=json&api_key=' + APP_API;
         $http( {
-          url   : url,
-          cache : true
+          url  : url,
+          cache: true
         } ).success( function (data) {
           if (typeof data.status === 'object') {
             window.alert( 'Encountered and error requesting cars data: \r\n"' +
             data.status.message + '"' );
             d.reject( data.status );
           } else {
-            data.makesArr = {};
+            //Creating a car makes and id value pair,
+            data.makesObj = {};
             var i;
-            //console.log(data.makes[2].name);
             for (i = 0; i < data.makes.length; i++) {
-            //  data.index[data.makes[i].name] = i;
-              data.makesArr[data.makes[i].name] = i;
+              data.makesObj[data.makes[i].name] = data.makes[i].id;
+            }
+            //console.log(data.makesObj);
+            d.resolve( data );
+          }
+        } ).error( function (data, status) {
+          window.alert( status + ' error attempting to access edmunds.com.' );
+          d.reject();
+        } );
+        return d.promise;
+      },
+      getAllNewCarModels: function () {
+        var d = $q.defer();
+        var url = EDM_API_PREFIX + '/makes?state=new&view=basic&fmt=json&api_key=' + APP_API;
+        $http( {
+          url  : url,
+          cache: true
+        } ).success( function (data) {
+          if (typeof data.status === 'object') {
+            window.alert( 'Encountered and error requesting cars data: \r\n"' +
+            data.status.message + '"' );
+            d.reject( data.status );
+          } else {
+            var i;
+            var j;
+            var k=0;
+            data.models = {};
+            for (i = 0; i < data.makes.length; i++) {
+              for (j = 0; j < data.makes[i].models.length; j++) {
+                data.models[k] = {
+                  'name': data.makes[i].name + ' ' + data.makes[i].models[j].name,
+                  'id'  : data.makes[i].models[j].years[0].id
+                };
+                k++;
+              }
             }
             d.resolve( data );
           }
@@ -76,6 +108,7 @@ angular.module( 'edmundsLibrary', [] )
         } );
         return d.promise;
       }
+
 
     };
   } );
