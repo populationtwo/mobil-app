@@ -15,7 +15,6 @@ var app = angular
     'ngAnimate',
     'ngCookies',
     'ngResource',
-    //'ngRoute',
     'ngSanitize',
     'ngTouch',
     'edmundsLibrary',
@@ -23,25 +22,21 @@ var app = angular
     'ui.router'
   ] )
   .config( function ($stateProvider, $urlRouterProvider) {
-    //
+
     // For any unmatched url, redirect to /state1
     $urlRouterProvider.otherwise( '/' );
-    //
+
     // Now set up the states
     $stateProvider
-
 
       .state( 'home', {
         url        : '/',
         templateUrl: '../partials/comparison/main.html',
         controller : 'MainCtrl'
-
       } )
       .state( 'compare', {
         url        : '/compare',
         templateUrl: '../partials/result/compare-result.html'
-
-
       } )
       .state( 'about', {
         url        : '/about',
@@ -52,9 +47,7 @@ var app = angular
   .factory( 'appData', ['edmundsLibFactory',
     function (edmundsLibFactory) {
       var Data = {};
-
-      Data.makes = edmundsLibFactory.getAllCarMakes();
-      Data.models = edmundsLibFactory.getAllNewCarModels();
+      Data.getCarMakes = edmundsLibFactory.getCarMakes;
 
       return Data;
     }] );

@@ -68,13 +68,21 @@
           </label>
         </div>
         <div class="form-group">
-          <label for="">Condition:</label>
-          <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox1" value="option1"> New
-          </label>
-          <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox2" value="option2"> Used
-          </label>
+          <label>Condition:</label>
+          <div class="radio-inline">
+            <label>
+              <input type="radio" ng-change=getMakes() ng-model="conditionmodel" name="conditionRadios" id="conditionNew" value="new">
+              New
+            </label>
+          </div>
+          <div class="radio-inline">
+            <label>
+              <input type="radio" ng-change=getMakes() ng-model="conditionmodel" name="conditionRadios" id="conditionUsed" value="used">
+              Used
+            </label>
+          </div>
+{{conditionmodel}}
+
         </div>
         <div class="form-group">
           <label for="">Model:</label>
@@ -92,7 +100,7 @@
 
   </div>
   <div class="row">
-    <span ng-repeat="make in makes">{{make.name}}</span>
+    <p ng-repeat="make in makes">{{make.name}}</p>
     <div class="compare-block">
       <div class="card" ng-repeat="model in models">
         <div class="card-inner">
