@@ -47,13 +47,19 @@ app.controller( 'MainCtrl', function ($scope, $q, appData) {
   //} );
 
   $scope.init = function () {
-    $scope.conditionmodel = 'new';
+    $scope.state = 'new';
     $scope.getMakes();
   }
 
   $scope.getMakes = function () {
-    appData.getCarMakes( $scope.conditionmodel ).then( function (result) {
+    appData.getCarMakes( $scope.state ).then( function (result) {
       $scope.makes = result.makes;
+    } );
+  }
+
+  $scope.getModels = function () {
+    appData.getCarModels( $scope.carMake, $scope.state   ).then( function (result) {
+      $scope.models = result.models;
     } );
   }
 

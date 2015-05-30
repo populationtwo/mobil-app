@@ -42,6 +42,33 @@
 
       <form>
         <div class="form-group">
+          <label>Condition:</label>
+
+          <div class="radio-inline">
+            <label>
+              <input type="radio" ng-change=getMakes() ng-model="state" name="stateRadios" id="stateNew" value="new">
+              New
+            </label>
+          </div>
+          <div class="radio-inline">
+            <label>
+              <input type="radio" ng-change=getMakes() ng-model="state" name="stateRadios" id="stateUsed" value="used">
+              Used
+            </label>
+          </div>
+          {{state}}
+        </div>
+
+        <div class="form-group">
+          <select ng-change=getModels() ng-options="make.niceName as make.name for make in makes" ng-model="carMake" class="form-control">
+            <option value=''>Select a Make</option>
+          </select>
+        </div>
+        {{carMake}}
+
+
+        <p ng-repeat="model in models">{{model.name}}</p>
+        <div class="form-group">
           <label for="">Search</label>
           <input type="email" class="form-control" id="" placeholder="e.g. 2015 Audi A5">
         </div>
@@ -67,23 +94,7 @@
             <input type="checkbox" id="inlineCheckbox3" value="option3"> Van
           </label>
         </div>
-        <div class="form-group">
-          <label>Condition:</label>
-          <div class="radio-inline">
-            <label>
-              <input type="radio" ng-change=getMakes() ng-model="conditionmodel" name="conditionRadios" id="conditionNew" value="new">
-              New
-            </label>
-          </div>
-          <div class="radio-inline">
-            <label>
-              <input type="radio" ng-change=getMakes() ng-model="conditionmodel" name="conditionRadios" id="conditionUsed" value="used">
-              Used
-            </label>
-          </div>
-{{conditionmodel}}
 
-        </div>
         <div class="form-group">
           <label for="">Model:</label>
           <select class="form-control">
@@ -100,7 +111,7 @@
 
   </div>
   <div class="row">
-    <p ng-repeat="make in makes">{{make.name}}</p>
+
     <div class="compare-block">
       <div class="card" ng-repeat="model in models">
         <div class="card-inner">
@@ -109,8 +120,8 @@
           </figure>
           <div class="card-info">
             <h3>2015 Nissan Frontier King Cab</h3>
- {{ model.name }}
- {{ model.id }}
+            {{ model.name }}
+            {{ model.id }}
             <div class="card-detail">
               <p class="msrp">$17,990</p>
 

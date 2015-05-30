@@ -48,6 +48,7 @@ var app = angular
     function (edmundsLibFactory) {
       var Data = {};
       Data.getCarMakes = edmundsLibFactory.getCarMakes;
+      Data.getCarModels = edmundsLibFactory.getCarModels;
 
       return Data;
     }] );
