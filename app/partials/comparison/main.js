@@ -58,11 +58,16 @@ app.controller( 'MainCtrl', function ($scope, $q, appData) {
   }
 
   $scope.getModels = function () {
-    appData.getCarModels( $scope.carMake, $scope.state   ).then( function (result) {
+    appData.getCarModels( $scope.carMake, $scope.state ).then( function (result) {
       $scope.models = result.models;
     } );
   }
 
+  $scope.getModelYear = function () {
+    appData.getCarModelYear( $scope.carMake, $scope.state, $scope.carModel ).then( function (result) {
+      $scope.years = result.years;
+    } );
+  }
   $scope.init();
 
 } );

@@ -49,6 +49,7 @@ var app = angular
       var Data = {};
       Data.getCarMakes = edmundsLibFactory.getCarMakes;
       Data.getCarModels = edmundsLibFactory.getCarModels;
+      Data.getCarModelYear = edmundsLibFactory.getCarModelYear;
 
       return Data;
     }] );
