@@ -56,7 +56,6 @@
               Used
             </label>
           </div>
-          {{state}}
         </div>
 
         <div class="form-group">
@@ -64,16 +63,26 @@
             <option value=''>Select a Make</option>
           </select>
         </div>
-        {{carMake}}
 
         <div class="form-group">
           <select ng-change=getModelYear() ng-options="model.niceName as model.name for model in models" ng-model="carModel" class="form-control">
             <option value=''>Select a Model</option>
           </select>
-          {{carModel}}
         </div>
 
-        <p ng-repeat="year in years">{{year.year}}</p>
+        <div class="form-group">
+          <select ng-change=getModelYear() ng-options="year.id as year.year for year in years" ng-model="carModelYear" class="form-control">
+            <option value=''>Select Year</option>
+          </select>
+        </div>
+
+        {{state}}
+        {{carMake}}
+        {{carModel}}
+        {{carModelYear}}
+
+
+        <!--<p ng-repeat="year in years">{{year.year}}</p>-->
         <div class="form-group">
           <label for="">Search</label>
           <input type="email" class="form-control" id="" placeholder="e.g. 2015 Audi A5">
